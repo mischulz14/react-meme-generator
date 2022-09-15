@@ -22,8 +22,8 @@ function App() {
   }, []);
 
   const imageUrl = `https://api.memegen.link/images/${memeTemplate}/${
-    topText ? topText.replace(' ', '_') : '_'
-  }/${bottomText ? bottomText.replace(' ', '_') : '_'}`;
+    topText ? topText : '_'
+  }/${bottomText ? bottomText : '_'}.jpg`;
 
   const handleDownload = (url, filename) => {
     axios
@@ -72,14 +72,12 @@ function App() {
             id="select"
             onChange={(e) => {
               setMemeTemplate(e.currentTarget.value);
-              setTopText('');
-              setBottomText('');
             }}
           >
             {templates.map((template) => {
               return (
                 <option value={template.id} key={template.id}>
-                  {template.id}
+                  {template.name}
                 </option>
               );
             })}
@@ -88,14 +86,18 @@ function App() {
             Top text
             <input
               value={topText}
-              onChange={(e) => setTopText(e.currentTarget.value)}
+              onChange={(e) =>
+                setTopText(e.currentTarget.value.replace(' ', '_'))
+              }
             />
           </label>
           <label>
             Bottom text
             <input
               value={bottomText}
-              onChange={(e) => setBottomText(e.currentTarget.value)}
+              onChange={(e) =>
+                setBottomText(e.currentTarget.value.replace(' ', '_'))
+              }
             />
           </label>
         </section>
