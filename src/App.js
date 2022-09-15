@@ -21,9 +21,9 @@ function App() {
       .catch((err) => console.log(err));
   }, []);
 
-  const imageUrl = `https://api.memegen.link/images/${memeTemplate}/${
-    topText ? topText : '_'
-  }/${bottomText ? bottomText : ''}.jpg`;
+  const imageUrl = topText
+    ? `https://api.memegen.link/images/${memeTemplate}/${topText}/${bottomText}.jpg`
+    : `https://api.memegen.link/images/${memeTemplate}/_/${bottomText}.jpg`;
 
   const handleDownload = (url, filename) => {
     axios
