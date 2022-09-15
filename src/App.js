@@ -112,7 +112,7 @@ function App() {
                 `${memeTemplate}-${topText.replace(
                   ' ',
                   '-',
-                )}-${bottomText.replace(' ', '-')}.png`,
+                )}-${bottomText.replace(' ', '-')}.jpg`,
               )
             }
           >
