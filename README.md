@@ -1,3 +1,10 @@
+### REACT MEME GENERATOR
+
+This is a simple meme generator where you can choose a meme template, type in a top and bottom text and download the picture.
+Have fun!
+
+## create react app stuff
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
