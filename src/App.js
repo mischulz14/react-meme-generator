@@ -101,9 +101,8 @@ function App() {
         </section>
 
         <section className="meme-preview">
-          <div className="img-container">
-            <img data-test-id="meme-image" src={imageUrl} alt="meme" />
-          </div>
+          <img data-test-id="meme-image" src={imageUrl} alt="meme" />
+
           <button
             onClick={() =>
               handleDownload(
