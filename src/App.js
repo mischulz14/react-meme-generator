@@ -23,7 +23,7 @@ function App() {
 
   const imageUrl = `https://api.memegen.link/images/${memeTemplate}/${
     topText ? topText : '_'
-  }/${bottomText ? bottomText : '_'}.jpg`;
+  }/${bottomText ? bottomText : ''}.jpg`;
 
   const handleDownload = (url, filename) => {
     axios
