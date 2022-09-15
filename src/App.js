@@ -22,8 +22,8 @@ function App() {
   }, []);
 
   const imageUrl = `https://api.memegen.link/images/${memeTemplate}/${
-    topText ? topText : '_'
-  }/${bottomText ? bottomText : '_'}`;
+    topText ? topText.replace(' ', '_') : '_'
+  }/${bottomText ? bottomText.replace(' ', '_') : '_'}`;
 
   const handleDownload = (url, filename) => {
     axios
@@ -79,7 +79,7 @@ function App() {
             {templates.map((template) => {
               return (
                 <option value={template.id} key={template.id}>
-                  {template.name}
+                  {template.id}
                 </option>
               );
             })}
