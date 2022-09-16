@@ -15,9 +15,7 @@ function App() {
   useEffect(() => {
     fetch('https://api.memegen.link/templates')
       .then((res) => res.json())
-      .then((data) => {
-        setTemplates(data);
-      })
+      .then(setTemplates)
       .catch((err) => console.log(err));
   }, []);
 
@@ -52,13 +50,12 @@ function App() {
         css={css`
           display: flex;
           justify-content: center;
+          align-items: center;
         `}
       >
         <div className="container">
           <img data-test-id="meme-image" src={imageUrl} alt="meme" />
-
           <h2> How should your meme look like? </h2>
-
           <label htmlFor="select">Meme template</label>
           <select
             id="select"
@@ -74,24 +71,39 @@ function App() {
               );
             })}
           </select>
-          <label>
+          <label
+            htmlFor="top-text"
+            css={css`
+              display: none;
+            `}
+          >
             Top text
-            <input
-              value={topText.replace('_', ' ')}
-              onChange={(e) =>
-                setTopText(e.currentTarget.value.replace(' ', '_'))
-              }
-            />
           </label>
-          <label>
+
+          <input
+            placeholder="Top text"
+            id="top-text"
+            value={topText.replace('_', ' ')}
+            onChange={(e) =>
+              setTopText(e.currentTarget.value.replace(' ', '_'))
+            }
+          />
+          <label
+            css={css`
+              display: none;
+            `}
+            htmlFor="bottom-text"
+          >
             Bottom text
-            <input
-              value={bottomText.replace('_', ' ')}
-              onChange={(e) =>
-                setBottomText(e.currentTarget.value.replace(' ', '_'))
-              }
-            />
           </label>
+          <input
+            placeholder="Bottom text"
+            id="bottom-text"
+            value={bottomText.replace('_', ' ')}
+            onChange={(e) =>
+              setBottomText(e.currentTarget.value.replace(' ', '_'))
+            }
+          />
 
           <button
             onClick={() =>

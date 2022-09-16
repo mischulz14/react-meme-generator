@@ -11,6 +11,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 30rem;
   border-radius: 10px;
   margin-bottom: 3rem;
@@ -44,8 +45,9 @@ label {
 }
 
 input {
+  width: 10rem;
+  text-align: center;
   padding: 0.3rem 2rem;
-  margin-left: 2rem;
   margin-bottom: 2rem;
   background-color: transparent;
   outline: 0;
@@ -55,14 +57,17 @@ input {
   font-size: 1rem;
 }
 
+input::placeholder {
+  color: hsla(0, 0%, 100%, 0.61);
+}
+
 button {
   all: unset;
   align-self: center;
   background-color: hsl(150, 100%, 66%);
   color: hsl(217, 54%, 11%);
   padding: 1rem 3rem;
-  margin-top: 2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   position: relative;
   transition: all 0.3s;
   border-radius: 10px;
