@@ -1,97 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
+
 body {
   width: 100%;
-  height: 100vh;
-  background-color: #ffb699;
-  background-image: radial-gradient(
-      at 0% 26%,
-      hsla(190, 73%, 79%, 1) 0px,
-      transparent 50%
-    ),
-    radial-gradient(at 14% 65%, hsla(51, 83%, 78%, 1) 0px, transparent 50%),
-    radial-gradient(at 9% 80%, hsla(268, 74%, 65%, 1) 0px, transparent 50%),
-    radial-gradient(at 70% 12%, hsla(310, 99%, 73%, 1) 0px, transparent 50%),
-    radial-gradient(at 2% 2%, hsla(178, 90%, 64%, 1) 0px, transparent 50%),
-    radial-gradient(at 58% 52%, hsla(27, 71%, 72%, 1) 0px, transparent 50%),
-    radial-gradient(at 0% 32%, hsla(237, 74%, 78%, 1) 0px, transparent 50%);
-  font-family: sans-serif;
+  font-family: 'Manrope', sans-serif;
+  background-color: hsl(218, 23%, 16%);
+  color: hsl(193, 38%, 86%);
 }
 
-h1 {
-  font-size: 2.5rem;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30rem;
+  border-radius: 10px;
+  margin-bottom: 3rem;
+  background-color: hsl(217, 19%, 24%);
+  box-shadow: 3px 3px 10px 1px rgba(151, 151, 151, 0.137);
 }
 
 img {
-  margin-top: 3rem;
-  width: 35rem;
-  height: 35rem;
+  width: 80%;
   object-fit: contain;
-}
-
-.meme-selection {
-  box-shadow: 3px 3px 20px 1px rgba(0, 0, 0, 0.295);
-  height: 100%;
-  color: rgb(66, 66, 66);
-  align-self: center;
-  padding: 1rem 4rem;
-  border-radius: 10px;
+  margin-top: 2rem;
 }
 
 h2 {
-  font-size: 1.7rem;
-  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  margin: 1.5rem 0;
 }
 
 select {
-  margin-bottom: 2rem;
-  margin-top: 0.5rem;
-  padding: 0.5rem 0;
+  text-align: center;
+  width: 50%;
+  margin: 0.5rem 0 2rem 0;
+  padding: 0.5rem;
   border-radius: 5px;
-  font-size: 1rem;
-  color: rgb(66, 66, 66);
+  font-size: 0.9rem;
+  color: hsl(218, 23%, 16%);
 }
 
 label {
-  font-size: 1.3rem;
-  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 input {
   padding: 0.3rem 2rem;
   margin-left: 2rem;
   margin-bottom: 2rem;
-  font-size: 1.2rem;
   background-color: transparent;
   outline: 0;
   border: none;
-  border-bottom: 2px solid rgb(66, 66, 66);
-}
-
-.meme-preview {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  border-bottom: 2px solid hsl(193, 38%, 86%);
+  color: hsl(0, 0%, 100%);
+  font-size: 1rem;
 }
 
 button {
   all: unset;
-  background-color: #fff;
+  align-self: center;
+  background-color: hsl(150, 100%, 66%);
+  color: hsl(217, 54%, 11%);
   padding: 1rem 3rem;
   margin-top: 2rem;
+  margin-bottom: 1.5rem;
   position: relative;
   transition: all 0.3s;
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
-  box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.295);
+  box-shadow: 3px 3px 10px 1px rgba(151, 151, 151, 0.295);
 }
 
 button:after {
   content: '';
+  color: hsl(217, 54%, 11%);
   background-image: url('./img/download.svg');
-  background-size: 20%;
+  background-size: 2rem;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #fff;
+  background-color: hsl(150, 100%, 66%);
   border-radius: 10px;
   height: 100%;
   width: 100%;
@@ -103,10 +90,11 @@ button:after {
 
 button::before {
   content: 'Download';
+  color: hsl(217, 54%, 11%);
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
+  background-color: hsl(150, 100%, 66%);
   border-radius: 10px;
   height: 100%;
   width: 100%;

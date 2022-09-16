@@ -42,31 +42,23 @@ function App() {
         css={css`
           margin: 0;
           text-align: center;
-          padding: 2rem 0;
+          padding: 1rem 0;
         `}
       >
-        Generate Your Own Meme!
+        Meme Generator
       </h1>
       <div
         className="App"
         css={css`
           display: flex;
-          justify-content: space-evenly;
-          align-items: flex-start;
-          width: 100%;
-          padding: 0;
-          margin: 0;
+          justify-content: center;
         `}
       >
-        <section
-          className="meme-selection"
-          css={css`
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-          `}
-        >
+        <div className="container">
+          <img data-test-id="meme-image" src={imageUrl} alt="meme" />
+
           <h2> How should your meme look like? </h2>
+
           <label htmlFor="select">Meme template</label>
           <select
             id="select"
@@ -100,10 +92,6 @@ function App() {
               }
             />
           </label>
-        </section>
-
-        <section className="meme-preview">
-          <img data-test-id="meme-image" src={imageUrl} alt="meme" />
 
           <button
             onClick={() =>
@@ -118,7 +106,7 @@ function App() {
           >
             Download
           </button>
-        </section>
+        </div>
       </div>
     </>
   );
