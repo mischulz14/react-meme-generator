@@ -77,7 +77,7 @@ function App() {
           <label>
             Top text
             <input
-              value={topText}
+              value={topText.replace('_', ' ')}
               onChange={(e) =>
                 setTopText(e.currentTarget.value.replace(' ', '_'))
               }
@@ -86,7 +86,7 @@ function App() {
           <label>
             Bottom text
             <input
-              value={bottomText}
+              value={bottomText.replace('_', ' ')}
               onChange={(e) =>
                 setBottomText(e.currentTarget.value.replace(' ', '_'))
               }
