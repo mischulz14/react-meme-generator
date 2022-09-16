@@ -14,7 +14,7 @@ body {
   justify-content: center;
   width: 30rem;
   border-radius: 10px;
-  margin-bottom: 3rem;
+  margin: 0 1rem 3rem 1rem;
   background-color: hsl(217, 19%, 24%);
   box-shadow: 3px 3px 10px 1px rgba(151, 151, 151, 0.137);
 }
@@ -28,6 +28,7 @@ img {
 h2 {
   font-size: 1.4rem;
   margin: 1.5rem 0;
+  text-align: center;
 }
 
 select {
