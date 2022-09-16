@@ -65,7 +65,7 @@ button {
   all: unset;
   align-self: center;
   background-color: hsl(150, 100%, 66%);
-  color: hsl(217, 54%, 11%);
+  color: transparent;
   padding: 1rem 3rem;
   margin-bottom: 2rem;
   position: relative;
